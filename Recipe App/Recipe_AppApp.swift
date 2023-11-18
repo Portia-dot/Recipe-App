@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Recipe_AppApp: App {
+    var favoritesViewModel = FavoritesViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(favoritesViewModel)
         }
     }
 }
